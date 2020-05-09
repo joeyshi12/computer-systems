@@ -1,0 +1,4 @@
+In the main program, the element pointers of nodes in the linked list and the
+element pointers of nodes in the binary tree points to the same element.
+So, when the list is deleted, the nodes in the binary tree have
+dangling pointers. 

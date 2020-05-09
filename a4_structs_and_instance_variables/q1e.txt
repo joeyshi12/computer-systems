@@ -1,0 +1,5 @@
+We must change the %s specifier in
+
+printf("  You are visitor #%s.\n", id);
+
+to %d instead because we want to print an integer, not string.

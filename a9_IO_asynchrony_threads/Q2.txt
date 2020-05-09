@@ -1,0 +1,53 @@
+======== sRead =========
+
+time ./sRead 10
+163
+
+real    0m0.114s
+user    0m0.111s
+sys     0m0.001s
+
+time ./sRead 100
+1468
+
+real    0m1.102s
+user    0m1.101s
+sys     0m0.001s
+
+time ./sRead 1000
+14518
+
+real    0m10.994s
+user    0m10.989s
+sys     0m0.004s
+
+======== aRead =========
+
+time ./aRead 10
+163
+
+real    0m0.013s
+user    0m0.013s
+sys     0m0.000s
+
+time ./aRead 100
+1468
+
+real    0m0.013s
+user    0m0.013s
+sys     0m0.000s
+
+time ./aRead 1000
+14518
+
+real    0m0.015s
+user    0m0.011s
+sys     0m0.004s
+
+
+The runtime of aRead stays relatively close to 0.013 as we increase the number
+of reads by different order of magnitudes, while the runtime of sRead grows
+linearly as we increase the amount of reads. This is because sRead waits for each
+block to be read before moving onto the next, while aRead handles multiple requests
+in parallel. Hence, aRead should not increase linearly with respect to the amount
+of reads.

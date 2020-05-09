@@ -1,0 +1,25 @@
+time ./sRead 10
+163
+
+real    0m0.114s
+user    0m0.111s
+sys     0m0.001s
+
+time ./sRead 100
+1468
+
+real    0m1.102s
+user    0m1.101s
+sys     0m0.001s
+
+time ./sRead 1000
+14518
+
+real    0m10.994s
+user    0m10.989s
+sys     0m0.004s
+
+
+The real, elapsed time is proportional to the number of reads we perform. We know
+that the expected time it takes to perform a single read is 10ms, so the expected time it
+takes for our program to complete n reads is (n * 10ms).
