@@ -1,2 +1,5 @@
 # computer-systems
-A collection of excercises I have done in UBC CPSC 213: Intro to Computer Systems.
+University of British Columbia \
+CPSC 213: Intro to Computer Systems (2019 WT2) \
+Content released under instructor's consent 
+
